@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../assets/css/TaskForm.css';
+import { toast } from 'react-toastify';
 
 const TaskForm = () => {
     const [task, setTask] = useState({ title: '', description: '', status: 'pending', dueDate: '', category: '' });
@@ -28,7 +29,19 @@ const TaskForm = () => {
             });
 
             if (response.ok) {
-                navigate('/tasks');
+                toast.success('Task Added Successfully.', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                setTimeout(() => {
+                    navigate('/tasks');
+                }, 2000);
             } else {
                 const data = await response.json();
                 setError(data.message || 'Failed to create task');

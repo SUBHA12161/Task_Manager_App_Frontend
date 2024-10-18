@@ -35,7 +35,7 @@ const Login = () => {
                     theme: "colored",
                 });
                 setTimeout(() => {
-                    navigate('/tasks/new');
+                    navigate('/');
                 }, 2000);
             } else {
                 const data = await response.json();
