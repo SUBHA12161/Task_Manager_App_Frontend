@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Task Manager Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A user-friendly task management application built with React.js, designed to work with a separate backend API. This frontend application allows users to create, view, update, and delete tasks, manage categories, and filter tasks by various criteria.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User authentication (signup and login)
+- Create, read, update, and delete (CRUD) tasks
+- Categorize tasks for better organization
+- Filter tasks by status and category
+- Pagination for easier navigation
+- Responsive design for desktop and mobile devices
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js, React Router, Reactstrap
+- **Backend**: The backend API is built with Node.js and Express.js (not included in this repository)
+- **Authentication**: JWT (JSON Web Tokens)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ensure you have the following installed on your machine:
 
-### `npm run build`
+- [Node.js](https://nodejs.org/en/download/) (version 14 or later)
+- [npm](https://www.npmjs.com/get-npm) (Node Package Manager)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the Repository**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- git clone https://github.com/SUBHA12161/Task_Manager_App_Frontend.git
+- cd Task_Manager_App_Frontend
 
-### `npm run eject`
+2. **Install Dependencies**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Start the Application**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- npm start
+- The application should now be running on http://localhost:3000.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Usage
 
-## Learn More
+1. **User Registration and Login**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Navigate to /signup to create a new account.
+- Log in at the /login route after signing up.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Managing Tasks**
 
-### Code Splitting
+- Use the "Add Task" option to create new tasks.
+- View your tasks on the "View Tasks" page.
+- Filter tasks by category and status using the provided filters.
+- Edit or delete tasks directly from the task list.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Categories**
 
-### Analyzing the Bundle Size
+- Manage task categories by navigating to "Add Category" and "View Categories."
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API Endpoints
 
-### Making a Progressive Web App
+- This frontend interacts with the following key API endpoints:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Tasks**
 
-### Advanced Configuration
+- GET /api/tasks - Fetch all tasks (supports pagination and filtering)
+- POST /api/tasks - Create a new task
+- PUT /api/tasks/:id - Update an existing task
+- DELETE /api/tasks/:id - Delete a task
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. **Categories**
 
-### Deployment
+- GET /api/categories - Fetch all categories
+- POST /api/categories - Create a new category
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. **Authentication**
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- POST /api/auth/signup - Register a new user
+- POST /api/auth/login - Log in a user
