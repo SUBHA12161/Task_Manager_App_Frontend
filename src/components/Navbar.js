@@ -15,7 +15,7 @@ const MyNavbar = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand as={NavLink} to="/" exact>Task Manager</Navbar.Brand>
+                <Navbar.Brand as={NavLink} to="/home" exact>Task Manager</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
