@@ -31,7 +31,7 @@ const CategoryList = () => {
     const handleDeleteCategory = async (id) => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`/api/categories/${id}`, {
+            const response = await fetch(`https://task-manager-app-backend-neon.vercel.app/api/categories/${id}`, {
                 method: 'DELETE',
                 headers: { Authorization: `Bearer ${token}` },
             });
