@@ -23,7 +23,7 @@ const TaskList = () => {
                 ...(category && { category }),
             }).toString();
 
-            const response = await fetch(`/api/tasks?${queryParams}`, {
+            const response = await fetch(`https://task-manager-app-backend-neon.vercel.app/api/tasks?${queryParams}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
@@ -82,7 +82,7 @@ const TaskList = () => {
     const handleDeleteClick = async (id) => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`/api/tasks/${id}`, {
+            const response = await fetch(`https://task-manager-app-backend-neon.vercel.app/api/tasks/${id}`, {
                 method: 'DELETE',
                 headers: {
                     Authorization: `Bearer ${token}`,

@@ -28,7 +28,7 @@ function App() {
           <Route path="/new/tasks" element={isLoggedIn ? <TaskForm /> : <Navigate to="/login" />} />
           <Route path="/categories" element={isLoggedIn ? <CategoryList /> : <Navigate to="/login" />} />
           <Route path="/new/categories" element={isLoggedIn ? <AddCategory /> : <Navigate to="/login" />} />
-          <Route path="/" element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" />} />
+          <Route path="/home" element={isLoggedIn ? <Dashboard /> : <Navigate to="/login" />} />
           <Route path="*" element={<Navigate to={isLoggedIn ? "/tasks" : "/login"} />} />
         </Routes>
       </Router>
