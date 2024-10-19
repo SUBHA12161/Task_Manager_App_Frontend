@@ -1,5 +1,5 @@
 {
-  "proxy": "https://task-manager-app-backend-p5bi24eoc-subha12161s-projects.vercel.app:4000",
+  "proxy": "https://task-manager-app-backend-neon.vercel.app/",
   "name": "task_manager_app_frontend",
   "version": "0.1.0",
   "private": true,
