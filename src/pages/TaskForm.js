@@ -19,7 +19,7 @@ const TaskForm = () => {
         }
 
         try {
-            const response = await fetch('/api/tasks', {
+            const response = await fetch('https://task-manager-app-backend-neon.vercel.app/api/tasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

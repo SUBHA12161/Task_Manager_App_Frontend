@@ -12,7 +12,7 @@ const Signup = () => {
         e.preventDefault();
         setError('');
         try {
-            const response = await fetch('/api/users/signup', {
+            const response = await fetch('https://task-manager-app-backend-neon.vercel.app/api/users/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

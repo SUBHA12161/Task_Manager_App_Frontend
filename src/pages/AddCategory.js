@@ -13,7 +13,7 @@ const AddCategory = () => {
 
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch('/api/categories', {
+            const response = await fetch('https://task-manager-app-backend-neon.vercel.app/api/categories', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
